@@ -10,7 +10,7 @@ function ApiCall() {
   useEffect(() => {
     if(localStorage.getItem('name') == undefined || localStorage.getItem('phone') === undefined || localStorage.getItem('email') === undefined){
       setValid(false)
-      navigate('/')
+      navigate('/',{state:{msg:"Please enter necessary details to proceed."}})
     }
     else{
       setValid(true)
