@@ -27,6 +27,9 @@ function Form() {
             alert("Please enter all the details.")
             return
         }
+        else if(phone === ""){
+            alrt
+        }
         else if(phone.length < 10){
             alert("Please enter valid phone number.\n(Hint : Length of phone number must be 10 digits)")
             return
@@ -59,6 +62,7 @@ function Form() {
                     <TextField 
                         fullWidth
                         value={phone}
+                        type="number"
                         onChange={(e) => setPhone(e.target.value)}
                         id="outlined-basic" 
                         label="Phone No." 
@@ -69,6 +73,7 @@ function Form() {
                 <Grid item xs={12}>
                     <TextField 
                         fullWidth
+                        type={"email"}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         id="outlined-basic" 
